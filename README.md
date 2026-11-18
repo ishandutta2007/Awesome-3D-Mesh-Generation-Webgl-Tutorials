@@ -1,28 +1,38 @@
-# Awesome 3D Mesh Generation & WebGL Tutorials
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome 3D Mesh Generation & WebGL Tutorials Banner" width="100%" />
+</p>
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials?style=social)](https://github.com/ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials/stargazers)
+# Awesome 3D Mesh Generation & WebGL Tutorials 🌐✨
 
-> A curated directory of the best **SaaS platforms**, **generative AI 3D engines**, and **open-source GitHub repositories** for 3D mesh generation, WebGL/WebGPU shaders, procedural geometry, LiDAR-to-Three.js pipelines, and browser-based 3D modeling.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5665F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-**Last updated: November 2026**
+> 🚀 A curated directory of the best **SaaS platforms**, **generative AI 3D engines**, and **open-source GitHub repositories** for 3D mesh generation, WebGL/WebGPU shaders, procedural geometry, LiDAR-to-Three.js pipelines, and browser-based 3D modeling.
 
----
-
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Hosted 3D Platforms](#saas--hosted-3d-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Key Architectural Stacks & Workflows](#key-architectural-stacks--workflows)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer & License](#disclaimer--license)
+**📅 Last updated: November 2026**
 
 ---
 
-## Sector Overview & Market Dynamics
+## 📑 Table of Contents
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted 3D Platforms](#️-saas--hosted-3d-platforms)
+- [🛠️ Open-Source GitHub Projects](#️-open-source-github-projects)
+- [🧩 Key Architectural Stacks & Workflows](#-key-architectural-stacks--workflows)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📜 Disclaimer & License](#-disclaimer--license)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
 
 The global 3D modeling and browser graphics software market represents an estimated **$12B to $14B** industry in 2026 (expanding toward $25B by 2032 at a 7–14% CAGR across CAD, web visualization, and generative 3D subsectors). 
 
@@ -30,7 +40,7 @@ The sector is **moderately fragmented**: legacy enterprise CAD and engineering w
 
 ---
 
-## SaaS & Hosted 3D Platforms
+## ☁️ SaaS & Hosted 3D Platforms
 
 Below is a breakdown of hosted web 3D design studios, cloud CAD systems, and interactive learning platforms, sorted by **Company Valuation / Revenue Scale (Descending)**.
 
@@ -49,7 +59,7 @@ Below is a breakdown of hosted web 3D design studios, cloud CAD systems, and int
 
 ---
 
-## Open-Source GitHub Projects
+## 🛠️ Open-Source GitHub Projects
 
 Curated open-source libraries, procedural mesh toolkits, CAD engines, and WebGL/WebGPU tutorials, sorted by **GitHub Stars (Descending)**.
 
@@ -83,7 +93,7 @@ Curated open-source libraries, procedural mesh toolkits, CAD engines, and WebGL/
 
 ---
 
-## Key Architectural Stacks & Workflows
+## 🧩 Key Architectural Stacks & Workflows
 
 To build production-grade web 3D applications, combine these tools into modular pipelines:
 
@@ -101,7 +111,24 @@ flowchart LR
 
 ---
 
-## How to Contribute
+##  Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-3D-Mesh-Generation-Webgl-Tutorials&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using this curated resource! If you find this directory valuable for your 3D graphics, WebGL/WebGPU projects, or generative mesh development:
+
+- ⭐ **Star this repository** on GitHub to help others discover it.
+- 🍴 **Fork and contribute** your favorite tools, tutorials, or open-source libraries.
+- 📢 **Share it** with friends, colleagues, and 3D web developer communities.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing updates and maintenance of this list, consider sponsoring via the **[GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)**. Your support is deeply appreciated!
+
+---
+
+## 🤝 How to Contribute
 
 Contributions are welcome! To propose new SaaS platforms or open-source repositories:
 
@@ -112,7 +139,7 @@ Contributions are welcome! To propose new SaaS platforms or open-source reposito
 
 ---
 
-## Disclaimer & License
+## 📜 Disclaimer & License
 
 - This curated list is maintained for educational and developer reference purposes. Products and company trademarks belong to their respective owners.
 - When deploying generated 3D meshes to client browsers, always benchmark memory consumption, draw calls, and triangle counts on mobile hardware.

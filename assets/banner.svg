@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="neonPinkViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f857a6" />
+      <stop offset="100%" stop-color="#ff5858" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="30%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#38bdf8" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;200%;100%" dur="12s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="wireframeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="slightGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.6" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes floatOrb1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(60px, 30px) scale(1.15); }
+    }
+    @keyframes floatOrb2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-50px, -25px) scale(0.9); }
+    }
+    @keyframes rotateMesh {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulsePill {
+      0%, 100% { opacity: 0.85; transform: translateY(0px); }
+      50% { opacity: 1; transform: translateY(-3px); }
+    }
+    @keyframes dashCycle {
+      to { stroke-dashoffset: -120; }
+    }
+
+    .orb-1 { animation: floatOrb1 10s ease-in-out infinite; }
+    .orb-2 { animation: floatOrb2 12s ease-in-out infinite; }
+    .mesh-spin {
+      transform-origin: 1040px 170px;
+      animation: rotateMesh 35s linear infinite;
+    }
+    .mesh-spin-left {
+      transform-origin: 140px 240px;
+      animation: rotateMesh 45s linear infinite reverse;
+    }
+    .pill-anim-1 { animation: pulsePill 4s ease-in-out infinite; }
+    .pill-anim-2 { animation: pulsePill 4s ease-in-out 1s infinite; }
+    .pill-anim-3 { animation: pulsePill 4s ease-in-out 2s infinite; }
+    .pill-anim-4 { animation: pulsePill 4s ease-in-out 3s infinite; }
+    .wire-dash {
+      stroke-dasharray: 6, 6;
+      animation: dashCycle 6s linear infinite;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Perspective Grid Underlay -->
+  <rect width="1200" height="420" rx="16" fill="url(#grid)" />
+
+  <!-- Animated Ambient Glowing Orbs in Background -->
+  <g class="orb-1">
+    <circle cx="220" cy="110" r="160" fill="#00f2fe" fill-opacity="0.08" filter="url(#glow)" />
+    <circle cx="980" cy="280" r="180" fill="#a855f7" fill-opacity="0.09" filter="url(#glow)" />
+  </g>
+  <g class="orb-2">
+    <circle cx="600" cy="360" r="170" fill="#38bdf8" fill-opacity="0.07" filter="url(#glow)" />
+    <circle cx="1060" cy="90" r="130" fill="#ec4899" fill-opacity="0.08" filter="url(#glow)" />
+  </g>
+
+  <!-- Left Side Geometric Wireframe Node Mesh (Background Accent) -->
+  <g class="mesh-spin-left" opacity="0.32">
+    <!-- 3D Icosahedron / Polyhedral projection wireframe -->
+    <polygon points="140,160 210,195 210,275 140,310 70,275 70,195" fill="none" stroke="url(#wireframeGrad)" stroke-width="1.2" class="wire-dash" />
+    <polygon points="140,180 190,210 190,265 140,290 90,265 90,210" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <line x1="140" y1="160" x2="140" y2="310" stroke="#818cf8" stroke-width="1" />
+    <line x1="70" y1="195" x2="210" y2="275" stroke="#818cf8" stroke-width="1" />
+    <line x1="70" y1="275" x2="210" y2="195" stroke="#818cf8" stroke-width="1" />
+    <!-- Vertices -->
+    <circle cx="140" cy="160" r="3.5" fill="#00f2fe" />
+    <circle cx="210" cy="195" r="3.5" fill="#38bdf8" />
+    <circle cx="210" cy="275" r="3.5" fill="#818cf8" />
+    <circle cx="140" cy="310" r="3.5" fill="#c084fc" />
+    <circle cx="70" cy="275" r="3.5" fill="#ec4899" />
+    <circle cx="70" cy="195" r="3.5" fill="#00f2fe" />
+    <circle cx="140" cy="235" r="4.5" fill="#ffffff" filter="url(#slightGlow)" />
+  </g>
+
+  <!-- Right Side Rotating 3D Polyhedron / Mesh Sphere Accent (Background Accent) -->
+  <g class="mesh-spin" opacity="0.45">
+    <!-- Outer Octahedron / Polyhedral rings -->
+    <ellipse cx="1040" cy="170" rx="100" ry="40" fill="none" stroke="url(#wireframeGrad)" stroke-width="1.4" class="wire-dash" transform="rotate(30 1040 170)" />
+    <ellipse cx="1040" cy="170" rx="100" ry="40" fill="none" stroke="url(#wireframeGrad)" stroke-width="1.4" class="wire-dash" transform="rotate(-30 1040 170)" />
+    <ellipse cx="1040" cy="170" rx="100" ry="100" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="3, 5" />
+    <!-- Inner faceted geometry -->
+    <polygon points="1040,80 1120,140 1100,230 1040,260 970,220 960,130" fill="none" stroke="#c084fc" stroke-width="1.2" />
+    <line x1="1040" y1="80" x2="1040" y2="260" stroke="#f43f5e" stroke-width="1.2" />
+    <line x1="960" y1="130" x2="1120" y2="140" stroke="#38bdf8" stroke-width="1.2" />
+    <line x1="970" y1="220" x2="1100" y2="230" stroke="#818cf8" stroke-width="1.2" />
+    <circle cx="1040" cy="80" r="3" fill="#38bdf8" />
+    <circle cx="1120" cy="140" r="3" fill="#a855f7" />
+    <circle cx="1100" cy="230" r="3" fill="#f43f5e" />
+    <circle cx="1040" cy="260" r="3" fill="#38bdf8" />
+    <circle cx="970" cy="220" r="3" fill="#818cf8" />
+    <circle cx="960" cy="130" r="3" fill="#00f2fe" />
+    <circle cx="1040" cy="170" r="4" fill="#ffffff" filter="url(#slightGlow)" />
+  </g>
+
+  <!-- High-Tech Border Outline -->
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="15" fill="none" stroke="#334155" stroke-width="1.2" stroke-opacity="0.6" />
+
+  <!-- Top Accent Bar -->
+  <line x1="80" y1="2" x2="350" y2="2" stroke="url(#cyanPurpleGrad)" stroke-width="3" filter="url(#slightGlow)" />
+  <line x1="850" y1="2" x2="1120" y2="2" stroke="url(#neonPinkViolet)" stroke-width="3" filter="url(#slightGlow)" />
+
+  <!-- ================= FOREGROUND CONTENT (Always clear & unobstructed) ================= -->
+
+  <!-- Top Meta Pill -->
+  <g transform="translate(600, 52)">
+    <rect x="-180" y="0" width="360" height="28" rx="14" fill="#1e293b" fill-opacity="0.8" stroke="#3b82f6" stroke-width="1" />
+    <circle cx="-158" cy="14" r="4.5" fill="#10b981">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="-144" y="19" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1">CURATED 3D &amp; GRAPHICS DIRECTORY</text>
+  </g>
+
+  <!-- Main Title: Awesome 3D Mesh Generation -->
+  <text x="600" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="url(#textGrad)" letter-spacing="-0.5" filter="url(#slightGlow)">
+    Awesome 3D Mesh Generation
+  </text>
+
+  <!-- Subtitle: WebGL &amp; WebGPU Tutorials Ecosystem -->
+  <text x="600" y="180" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#f8fafc" letter-spacing="0.2">
+    WebGL &amp; WebGPU Tutorials &amp; Tools Ecosystem
+  </text>
+
+  <!-- Tagline / Secondary Description -->
+  <text x="600" y="218" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+    Browser CAD &amp; CSG • LiDAR-to-Three.js • Generative 3D AI • Shaders &amp; Procedural Geometry
+  </text>
+
+  <!-- Divider Line -->
+  <line x1="360" y1="244" x2="840" y2="244" stroke="#334155" stroke-width="1.2" />
+
+  <!-- Feature Interactive Badges / Floating Topic Pills (Subtly Animated in Foreground Below Title) -->
+  <g transform="translate(600, 274)">
+    <!-- Pill 1: Three.js & R3F -->
+    <g class="pill-anim-1" transform="translate(-400, 0)">
+      <rect x="0" y="0" width="180" height="38" rx="19" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" fill-opacity="0.9" />
+      <circle cx="20" cy="19" r="6" fill="#38bdf8" />
+      <text x="34" y="24" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">Three.js &amp; R3F</text>
+    </g>
+
+    <!-- Pill 2: WebGPU & WGSL -->
+    <g class="pill-anim-2" transform="translate(-195, 0)">
+      <rect x="0" y="0" width="180" height="38" rx="19" fill="#0f172a" stroke="#6366f1" stroke-width="1.2" fill-opacity="0.9" />
+      <circle cx="20" cy="19" r="6" fill="#818cf8" />
+      <text x="34" y="24" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">WebGPU &amp; WGSL</text>
+    </g>
+
+    <!-- Pill 3: Generative 3D AI -->
+    <g class="pill-anim-3" transform="translate(15, 0)">
+      <rect x="0" y="0" width="185" height="38" rx="19" fill="#0f172a" stroke="#a855f7" stroke-width="1.2" fill-opacity="0.9" />
+      <circle cx="20" cy="19" r="6" fill="#c084fc" />
+      <text x="34" y="24" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">Generative 3D AI</text>
+    </g>
+
+    <!-- Pill 4: Procedural CAD & CSG -->
+    <g class="pill-anim-4" transform="translate(220, 0)">
+      <rect x="0" y="0" width="185" height="38" rx="19" fill="#0f172a" stroke="#ec4899" stroke-width="1.2" fill-opacity="0.9" />
+      <circle cx="20" cy="19" r="6" fill="#f43f5e" />
+      <text x="34" y="24" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600">Procedural CAD / CSG</text>
+    </g>
+  </g>
+
+  <!-- Bottom Metric / Status Strip -->
+  <g transform="translate(600, 360)">
+    <text x="-270" y="0" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">
+      📦 <tspan fill="#cbd5e1" font-weight="700">25+</tspan> Open-Source Repos
+    </text>
+    <text x="0" y="0" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">
+      ⚡ <tspan fill="#cbd5e1" font-weight="700">10+</tspan> SaaS &amp; Cloud Studios
+    </text>
+    <text x="270" y="0" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="500">
+      ⭐ Star &amp; Share on GitHub
+    </text>
+  </g>
+</svg>
